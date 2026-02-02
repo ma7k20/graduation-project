@@ -1,0 +1,139 @@
+/* ====== Global ====== */
+body {
+  background: linear-gradient(180deg, #f5f7ff, #ffffff);
+  font-family: 'Cairo', sans-serif !important;
+  direction: rtl;
+}
+
+/* ===== Header ===== */
+.top-bar {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 12px 0;
+}
+
+.logo {
+    height: 45px;
+}
+
+/* ====== Subject Card ====== */
+.subject-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 80px 24px 32px; /* ⬅️ زودنا padding-top */
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: all 0.35s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+
+
+.subject-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ====== Corner Shape ====== */
+[class^="card-corner"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  border-bottom-left-radius: 100%;
+  z-index: 0; /* ⬅️ خلف المحتوى */
+}
+
+.card-corner-ar { background: #F5EAFF; }
+.card-corner-science { background: #E5F8EC; }
+.card-corner-math { background: #E8F0FF; }
+.card-corner-en { background: #FFEFE5; }
+
+
+/* ====== Icon ====== */
+.icon-box {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  width: 65px;
+  height: 65px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #ffffff;
+  z-index: 2; /* ⬅️ فوق الكل */
+}
+
+
+/* ====== Icon Colors ====== */
+.icon-ar {
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+}
+
+.icon-science {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.icon-math {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.icon-en {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+}
+
+/* ====== Content ====== */
+.subject-title {
+  margin-top: 35px !important; 
+  margin-right: 15px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #111827;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ====== Start Button ====== */
+.start-btn {
+  margin-top: 14px;
+  margin-right: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.start-btn i {
+  font-size: 13px;
+}
+
+.subject-card:hover .start-btn {
+  color: #7c3aed;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .subject-title {
+    font-size: 18px;
+  }
+
+  .icon-box {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .card-corner {
+    width: 110px;
+    height: 110px;
+  }
+}

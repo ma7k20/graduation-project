@@ -1,0 +1,61 @@
+body {
+    font-family: 'Cairo', sans-serif !important;
+    background: linear-gradient(180deg, #f4f7ff, #ffffff) !important;
+}
+
+/* ===== Header ===== */
+.top-bar {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 12px 0;
+}
+
+.logo {
+    height: 45px;
+}
+
+/* ===== Page Title ===== */
+.page-title h1 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.page-title p {
+    color: #6c757d;
+}
+
+/* ===== Cards ===== */
+.grade-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.grade-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.25);
+}
+
+.icon-box {
+
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.icon-box img {
+    width: 60px;
+    height: 60px;
+}
+
+.grade-card h5 {
+    font-weight: 700;
+    margin: 0;
+}
