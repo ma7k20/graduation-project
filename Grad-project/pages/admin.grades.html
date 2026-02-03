@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إدارة الصفوف</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/admin.grades.css">
+</head>
+
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar offcanvas offcanvas-start offcanvas-lg" tabindex="-1" id="adminSidebar">
+      <div class='offcanvas-header d-lg-none'>
+        <h5 class='offcanvas-title'>القائمة</h5>
+        <button type='button' class='btn-close' data-bs-dismiss='offcanvas' aria-label='Close'></button>
+      </div>
+      <div class='offcanvas-body'>
+        <div class="brand d-flex align-items-center gap-2">
+          <img src="../img/logo.jpg" alt="الشعار">
+          <span>منصة بنوك الأسئلة</span>
+        </div>
+
+        <nav class="nav-links">
+          <a href="admin.dashboard.html"><i class="bi bi-grid"></i> نظرة عامة</a>
+          <a class="active" href="admin.grades.html"><i class="bi bi-list-check"></i> الصفوف</a>
+          <a href="admin.subjects.html"><i class="bi bi-journal-text"></i> المواد</a>
+          <a href="admin.units.html"><i class="bi bi-collection"></i> الوحدات</a>
+          <a href="admin.questions.html"><i class="bi bi-question-circle"></i> الأسئلة</a>
+          <a href="admin.exams.html"><i class="bi bi-clipboard-check"></i> الاختبارات</a>
+          <a href="#"><i class="bi bi-trophy"></i> النتائج</a>
+        </nav>
+
+        <a class="logout" href="login.html"><i class="bi bi-box-arrow-right"></i> تسجيل الخروج</a>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="content">
+      <header class="page-header">
+        <div>
+          <div class="page-title-row">
+            <h4 class="mb-1">إدارة الصفوف</h4>
+            <span class="page-tag">لوحة الإدارة</span>
+          </div>
+          <p class="text-muted mb-0">مرحباً بك في لوحة إدارة منصة بنوك الأسئلة</p>
+          <nav class="breadcrumb-lite" aria-label="مسار الصفحة">
+            <span>لوحة التحكم</span>
+            <i class="bi bi-chevron-left"></i>
+            <span>إدارة الصفوف</span>
+          </nav>
+        </div>
+        <button class="btn mobile-menu-btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#adminSidebar">
+          <i class="bi bi-list"></i> القائمة
+        </button>
+      </header>
+
+      <section class="header-actions">
+        <div>
+          <h5 class="mb-1">إدارة الصفوف</h5>
+          <p class="text-muted mb-0">إدارة جميع الصفوف الدراسية من الصف الأول إلى الثاني عشر</p>
+        </div>
+        <button class="btn add-btn" data-bs-toggle="modal" data-bs-target="#addGradeModal">
+          <i class="bi bi-plus-lg"></i> إضافة صف جديد
+        </button>
+      </section>
+
+      <section class="grades-grid">
+        <div class="grade-card reveal">
+          <div class="card-actions">
+            <i class="bi bi-trash3"></i>
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <div class="card-icon"><i class="bi bi-book"></i></div>
+          <h6>الصف الأول</h6>
+          <span class="pill">أساسي</span>
+          <div class="card-footer">
+            <div><i class="bi bi-people"></i> 145 طالب</div>
+            <div><i class="bi bi-journal-text"></i> 8 مواد</div>
+          </div>
+        </div>
+
+        <div class="grade-card reveal">
+          <div class="card-actions">
+            <i class="bi bi-trash3"></i>
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <div class="card-icon"><i class="bi bi-book"></i></div>
+          <h6>الصف الثاني</h6>
+          <span class="pill">أساسي</span>
+          <div class="card-footer">
+            <div><i class="bi bi-people"></i> 138 طالب</div>
+            <div><i class="bi bi-journal-text"></i> 8 مواد</div>
+          </div>
+        </div>
+
+        <div class="grade-card reveal">
+          <div class="card-actions">
+            <i class="bi bi-trash3"></i>
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <div class="card-icon"><i class="bi bi-book"></i></div>
+          <h6>الصف الثالث</h6>
+          <span class="pill">أساسي</span>
+          <div class="card-footer">
+            <div><i class="bi bi-people"></i> 152 طالب</div>
+            <div><i class="bi bi-journal-text"></i> 9 مواد</div>
+          </div>
+        </div>
+
+        <div class="grade-card reveal">
+          <div class="card-actions">
+            <i class="bi bi-trash3"></i>
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <div class="card-icon"><i class="bi bi-book"></i></div>
+          <h6>الصف الرابع</h6>
+          <span class="pill">أساسي</span>
+          <div class="card-footer">
+            <div><i class="bi bi-people"></i> 141 طالب</div>
+            <div><i class="bi bi-journal-text"></i> 9 مواد</div>
+          </div>
+        </div>
+
+        <div class="grade-card reveal">
+          <div class="card-actions">
+            <i class="bi bi-trash3"></i>
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <div class="card-icon"><i class="bi bi-book"></i></div>
+          <h6>الصف الخامس</h6>
+          <span class="pill">أساسي</span>
+          <div class="card-footer">
+            <div><i class="bi bi-people"></i> 134 طالب</div>
+            <div><i class="bi bi-journal-text"></i> 9 مواد</div>
+          </div>
+        </div>
+
+        <div class="grade-card reveal">
+          <div class="card-actions">
+            <i class="bi bi-trash3"></i>
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <div class="card-icon"><i class="bi bi-book"></i></div>
+          <h6>الصف السادس</h6>
+          <span class="pill">أساسي</span>
+          <div class="card-footer">
+            <div><i class="bi bi-people"></i> 129 طالب</div>
+            <div><i class="bi bi-journal-text"></i> 9 مواد</div>
+          </div>
+        </div>
+
+        <div class="grade-card reveal">
+          <div class="card-actions">
+            <i class="bi bi-trash3"></i>
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <div class="card-icon"><i class="bi bi-book"></i></div>
+          <h6>الصف السابع</h6>
+          <span class="pill">أساسي</span>
+          <div class="card-footer">
+            <div><i class="bi bi-people"></i> 122 طالب</div>
+            <div><i class="bi bi-journal-text"></i> 9 مواد</div>
+          </div>
+        </div>
+
+        <div class="grade-card reveal">
+          <div class="card-actions">
+            <i class="bi bi-trash3"></i>
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <div class="card-icon"><i class="bi bi-book"></i></div>
+          <h6>الصف الثامن</h6>
+          <span class="pill">أساسي</span>
+          <div class="card-footer">
+            <div><i class="bi bi-people"></i> 118 طالب</div>
+            <div><i class="bi bi-journal-text"></i> 9 مواد</div>
+          </div>
+        </div>
+
+        <div class="grade-card reveal">
+          <div class="card-actions">
+            <i class="bi bi-trash3"></i>
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <div class="card-icon"><i class="bi bi-book"></i></div>
+          <h6>الصف التاسع</h6>
+          <span class="pill">أساسي</span>
+          <div class="card-footer">
+            <div><i class="bi bi-people"></i> 112 طالب</div>
+            <div><i class="bi bi-journal-text"></i> 9 مواد</div>
+          </div>
+        </div>
+
+        <div class="grade-card reveal">
+          <div class="card-actions">
+            <i class="bi bi-trash3"></i>
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <div class="card-icon"><i class="bi bi-book"></i></div>
+          <h6>الصف العاشر</h6>
+          <span class="pill">أساسي</span>
+          <div class="card-footer">
+            <div><i class="bi bi-people"></i> 108 طالب</div>
+            <div><i class="bi bi-journal-text"></i> 9 مواد</div>
+          </div>
+        </div>
+
+        <div class="grade-card reveal">
+          <div class="card-actions">
+            <i class="bi bi-trash3"></i>
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <div class="card-icon"><i class="bi bi-book"></i></div>
+          <h6>الصف الحادي عشر</h6>
+          <span class="pill">علمي</span>
+          <div class="card-footer">
+            <div><i class="bi bi-people"></i> 96 طالب</div>
+            <div><i class="bi bi-journal-text"></i> 10 مواد</div>
+          </div>
+        </div>
+
+        <div class="grade-card reveal">
+          <div class="card-actions">
+            <i class="bi bi-trash3"></i>
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <div class="card-icon"><i class="bi bi-book"></i></div>
+          <h6>الصف الحادي عشر</h6>
+          <span class="pill alt">أدبي</span>
+          <div class="card-footer">
+            <div><i class="bi bi-people"></i> 90 طالب</div>
+            <div><i class="bi bi-journal-text"></i> 9 مواد</div>
+          </div>
+        </div>
+
+        <div class="grade-card reveal">
+          <div class="card-actions">
+            <i class="bi bi-trash3"></i>
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <div class="card-icon"><i class="bi bi-book"></i></div>
+          <h6>الصف الثاني عشر</h6>
+          <span class="pill">علمي</span>
+          <div class="card-footer">
+            <div><i class="bi bi-people"></i> 88 طالب</div>
+            <div><i class="bi bi-journal-text"></i> 10 مواد</div>
+          </div>
+        </div>
+
+        <div class="grade-card reveal">
+          <div class="card-actions">
+            <i class="bi bi-trash3"></i>
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <div class="card-icon"><i class="bi bi-book"></i></div>
+          <h6>الصف الثاني عشر</h6>
+          <span class="pill alt">أدبي</span>
+          <div class="card-footer">
+            <div><i class="bi bi-people"></i> 84 طالب</div>
+            <div><i class="bi bi-journal-text"></i> 9 مواد</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Add Grade Modal -->
+  <div class="modal fade" id="addGradeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">إضافة صف جديد</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="grade-form">
+            <div class="mb-3">
+              <label class="form-label">اسم الصف</label>
+              <input type="text" class="form-control" placeholder="مثال: الصف السادس">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">المرحلة</label>
+              <select class="form-select">
+                <option>أساسي</option>
+                <option>إعدادي</option>
+                <option>ثانوي</option>
+              </select>
+            </div>
+            <div class="form-hint">
+              سيتم إنشاء الصف ويمكنك إضافة الطلاب والمواد لاحقًا.
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">إلغاء</button>
+          <button type="button" class="btn btn-primary">حفظ الصف</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
