@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إدارة الأسئلة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/admin.questions.css">
+</head>
+
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar offcanvas offcanvas-start offcanvas-lg" tabindex="-1" id="adminSidebar">
+      <div class='offcanvas-header d-lg-none'>
+        <h5 class='offcanvas-title'>القائمة</h5>
+        <button type='button' class='btn-close' data-bs-dismiss='offcanvas' aria-label='Close'></button>
+      </div>
+      <div class='offcanvas-body'>
+      <div class="brand d-flex align-items-center gap-2">
+        <img src="../img/logo.jpg" alt="الشعار">
+        <span>منصة بنوك الأسئلة</span>
+      </div>
+
+      
+
+      <nav class="nav-links">
+        <a href="admin.dashboard.html"><i class="bi bi-grid"></i> نظرة عامة</a>
+        <a href="admin.grades.html"><i class="bi bi-list-check"></i> الصفوف</a>
+        <a href="admin.subjects.html"><i class="bi bi-journal-text"></i> المواد</a>
+        <a href="admin.units.html"><i class="bi bi-collection"></i> الوحدات</a>
+        <a class="active" href="admin.questions.html"><i class="bi bi-question-circle"></i> الأسئلة</a>
+        <a href="admin.exams.html"><i class="bi bi-clipboard-check"></i> الاختبارات</a>
+        <a href="#"><i class="bi bi-trophy"></i> النتائج</a>
+      </nav>
+
+      <a class="logout" href="login.html"><i class="bi bi-box-arrow-right"></i> تسجيل الخروج</a>
+
+      
+          </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="content">
+      <header class="page-header">
+        <div>
+          <div class="page-title-row">
+            <h4 class="mb-1">إدارة الأسئلة</h4>
+            <span class="page-tag">لوحة الإدارة</span>
+          </div>
+          <p class="text-muted mb-0">مرحباً بك في لوحة إدارة منصة بنوك الأسئلة</p>
+          <nav class="breadcrumb-lite" aria-label="مسار الصفحة">
+            <span>لوحة التحكم</span>
+            <i class="bi bi-chevron-left"></i>
+            <span>إدارة الأسئلة</span>
+          </nav>
+
+      
+        </div>
+        <button class="btn mobile-menu-btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#adminSidebar">
+          <i class="bi bi-list"></i> القائمة
+        </button>
+      </header>
+
+      <section class="header-actions">
+        <div>
+          <h5 class="mb-1">إدارة الأسئلة</h5>
+                    <p class="text-muted mb-0">إضافة وإدارة الأسئلة وربطها بالوحدات الدراسية</p>
+          <div class="breadcrumbs">
+            <span>صف</span>
+            <span class="sep">/</span>
+            <span>مادة</span>
+            <span class="sep">/</span>
+            <span>وحدة</span>
+            <span class="sep">/</span>
+            <span>سؤال</span>
+          </div>
+        </div>
+        <div class="actions-group">
+          <button class="btn add-btn" data-bs-toggle="modal" data-bs-target="#addQuestionModal">
+            <i class="bi bi-plus-lg"></i> إضافة سؤال جديد
+          </button>
+          <button class="btn filter-btn"><i class="bi bi-funnel"></i> تصفية</button>
+        </div>
+      </section>
+
+      <section class="questions-list">
+        <div class="question-card reveal">
+          <div class="q-head">
+            <span class="level easy">سهل</span>
+            <div class="q-actions">
+              <i class="bi bi-trash3"></i>
+              <i class="bi bi-pencil-square"></i>
+            </div>
+          </div>
+          <div class="q-title">
+            <h6>ما هو ناتج جمع 5 + 3 ؟</h6>
+            <span class="q-icon"><i class="bi bi-question-circle"></i></span>
+          </div>
+          <div class="q-meta">الصف العاشر • الرياضيات • الأعداد الحقيقية</div>
+          <div class="q-options">
+            <label class="q-option">
+              <input type="radio" name="q1">
+              <span>6</span>
+            </label>
+            <label class="q-option">
+              <input type="radio" name="q1">
+              <span>7</span>
+            </label>
+            <label class="q-option correct">
+              <input type="radio" name="q1" checked>
+              <span>8</span>
+            </label>
+            <label class="q-option">
+              <input type="radio" name="q1">
+              <span>9</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="question-card reveal">
+          <div class="q-head">
+            <span class="level mid">متوسط</span>
+            <div class="q-actions">
+              <i class="bi bi-trash3"></i>
+              <i class="bi bi-pencil-square"></i>
+            </div>
+          </div>
+          <div class="q-title">
+            <h6>قانون نيوتن الأول يتحدث عن:</h6>
+            <span class="q-icon"><i class="bi bi-question-circle"></i></span>
+          </div>
+          <div class="q-meta">الصف الحادي عشر • الفيزياء • الحركة</div>
+          <div class="q-options">
+            <label class="q-option correct">
+              <input type="radio" name="q2" checked>
+              <span>القصور الذاتي</span>
+            </label>
+            <label class="q-option">
+              <input type="radio" name="q2">
+              <span>الطاقة الحركية</span>
+            </label>
+            <label class="q-option">
+              <input type="radio" name="q2">
+              <span>قوة الاحتكاك</span>
+            </label>
+            <label class="q-option">
+              <input type="radio" name="q2">
+              <span>الجاذبية</span>
+            </label>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Add Question Modal -->
+  <div class="modal fade" id="addQuestionModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">إضافة سؤال جديد</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="question-form">
+            <div class="mb-3 qtype-section form-section">
+              <label class="form-label">نوع السؤال</label>
+              <div class="type-grid">
+                <label class="type-card">
+                  <input type="radio" name="qtype" value="mcq" checked>
+                  <span>اختر من متعدد</span>
+                </label>
+                <label class="type-card">
+                  <input type="radio" name="qtype" value="tf">
+                  <span>صح أو خطأ</span>
+                </label>
+                <label class="type-card">
+                  <input type="radio" name="qtype" value="fill">
+                  <span>اكمل الفراغ</span>
+                </label>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">نص السؤال</label>
+              <input type="text" class="form-control" placeholder="مثال: ما ناتج جمع 5 + 3 ؟">
+            </div>
+            <div class="row g-2 mb-3 form-section">
+              <div class="col-md-4">
+                <label class="form-label">الصف</label>
+                <select class="form-select">
+                  <option>اختر</option>
+                  <option>الصف التاسع</option>
+                  <option>الصف العاشر</option>
+                  <option>الصف الحادي عشر</option>
+                  <option>الصف الثاني عشر</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">المادة</label>
+                <select class="form-select">
+                  <option>اختر</option>
+                  <option>الرياضيات</option>
+                  <option>العلوم</option>
+                  <option>اللغة العربية</option>
+                  <option>اللغة الإنجليزية</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">الوحدة</label>
+                <select class="form-select">
+                  <option>اختر</option>
+                  <option>الأعداد الحقيقية</option>
+                  <option>المعادلات</option>
+                  <option>الهندسة</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-3 options-mcq form-section">
+              <label class="form-label">الخيارات (اختيار من متعدد)</label>
+              <div class="choices">
+                <label class="choice-item">
+                  <input type="radio" name="correct-mcq">
+                  <input type="text" class="form-control" placeholder="الخيار 1">
+                </label>
+                <label class="choice-item">
+                  <input type="radio" name="correct-mcq">
+                  <input type="text" class="form-control" placeholder="الخيار 2">
+                </label>
+                <label class="choice-item">
+                  <input type="radio" name="correct-mcq">
+                  <input type="text" class="form-control" placeholder="الخيار 3">
+                </label>
+                <label class="choice-item">
+                  <input type="radio" name="correct-mcq">
+                  <input type="text" class="form-control" placeholder="الخيار 4">
+                </label>
+              </div>
+              <div class="form-hint">حدد الإجابة الصحيحة عبر تحديد الدائرة.</div>
+            </div>
+
+            <div class="mb-3 options-tf form-section">
+              <label class="form-label">الإجابة (صح/خطأ)</label>
+              <div class="choices">
+                <label class="choice-item">
+                  <input type="radio" name="correct-tf">
+                  <input type="text" class="form-control" value="صح" readonly>
+                </label>
+                <label class="choice-item">
+                  <input type="radio" name="correct-tf">
+                  <input type="text" class="form-control" value="خطأ" readonly>
+                </label>
+              </div>
+            </div>
+
+            <div class="mb-3 options-fill form-section">
+              <label class="form-label">الإجابة الصحيحة (اكمل الفراغ)</label>
+              <input type="text" class="form-control" placeholder="اكتب الإجابة الصحيحة">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">مستوى الصعوبة</label>
+              <div class="level-grid">
+                <label class="level-pill">
+                  <input type="radio" name="level">
+                  <span>سهل</span>
+                </label>
+                <label class="level-pill active">
+                  <input type="radio" name="level" checked>
+                  <span>متوسط</span>
+                </label>
+                <label class="level-pill">
+                  <input type="radio" name="level">
+                  <span>صعب</span>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">إلغاء</button>
+          <button type="button" class="btn btn-primary">حفظ السؤال</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
+
+
+
