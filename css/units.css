@@ -1,5 +1,5 @@
-body {
-    font-family: 'Cairo', sans-serif !important;
+﻿body {
+    font-family: 'Noto Naskh Arabic', sans-serif !important;
     background-color: #f6f7fb !important;
 }
 
@@ -12,6 +12,14 @@ body {
 
 .logo {
     height: 45px;
+}
+
+.brand-title {
+    font-weight: 700;
+    font-size: 20px;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 /* ===== Page Title ===== */
 .badge{
@@ -27,15 +35,15 @@ body {
     border: none;
     border-radius: 18px;
 
-    /* ارتفاع أكبر */
+    /* ط§ط±طھظپط§ط¹ ط£ظƒط¨ط± */
     padding: 26px 22px;
 
-    /* عرض أقل */
+    /* ط¹ط±ط¶ ط£ظ‚ظ„ */
     max-width: 700px;
     width: 100%;
-    margin: 0 auto; /* توسيط الكارد */
+    margin: 0 auto; /* طھظˆط³ظٹط· ط§ظ„ظƒط§ط±ط¯ */
 
-    /* شدوو واضح وجميل */
+    /* ط´ط¯ظˆظˆ ظˆط§ط¶ط­ ظˆط¬ظ…ظٹظ„ */
     box-shadow: 
         0 10px 30px rgba(0, 0, 0, 0.12);
 
@@ -44,27 +52,27 @@ body {
         transform 0.35s ease;
 }
 
-/* Hover احترافي */
+/* Hover ط§ط­طھط±ط§ظپظٹ */
 .unit-card:hover {
     box-shadow: 
         0 20px 45px rgba(0, 0, 0, 0.18);
     transform: translateY(-6px);
 }
 
-/* العنوان */
+/* ط§ظ„ط¹ظ†ظˆط§ظ† */
 .unit-title {
     font-weight: 600;
     font-size: 16px;
     margin-bottom: 6px;
 }
 
-/* التفاصيل */
+/* ط§ظ„طھظپط§طµظٹظ„ */
 .unit-meta {
     font-size: 14px;
     color: #777;
 }
 
-/* زر البدء */
+/* ط²ط± ط§ظ„ط¨ط¯ط، */
 .unit-card .btn-start {
     background-color: #6f4ef6;
     color: #fff;
@@ -78,13 +86,13 @@ body {
 }
 
 .btn-start:hover {
-    background-color: #5b3fe0; /* أغمق شوي */
+    background-color: #5b3fe0; /* ط£ط؛ظ…ظ‚ ط´ظˆظٹ */
     box-shadow: 0 6px 16px rgba(111, 78, 246, 0.4);
     transform: translateY(-2px);
 }
 
 
-/* كارد الاختبارات */
+/* ظƒط§ط±ط¯ ط§ظ„ط§ط®طھط¨ط§ط±ط§طھ */
 .exam-card {
     position: relative;
     background-color: #f9f9ff;
@@ -100,7 +108,7 @@ body {
 }
 
 
-/* شريط جانبي */
+/* ط´ط±ظٹط· ط¬ط§ظ†ط¨ظٹ */
 .exam-card::before {
     content: "";
     position: absolute;
@@ -127,4 +135,51 @@ body {
     .btn-start {
         padding: 7px 18px;
     }
+}
+
+@media (max-width: 576px) {
+    .top-bar .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .unit-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
+
+.reveal {
+  animation: riseIn 0.6s ease both;
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(99, 102, 241, 0.35);
+  outline-offset: 2px;
+}
+
+
+.exam-card {
+  border: 1px solid #f5e9ff;
+  background: linear-gradient(135deg, #faf5ff, #ffffff);
+}
+
+.exam-badge {
+  background: #7c3aed;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(124, 58, 237, 0.25);
+  margin-inline-start: 8px;
 }

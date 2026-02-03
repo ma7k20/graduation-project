@@ -1,7 +1,7 @@
-/* ================== Global ================== */
+﻿/* ================== Global ================== */
 body {
     background: #f5f7fb !important;
-    font-family: "Cairo", sans-serif !important;
+    font-family: "Noto Naskh Arabic", sans-serif !important;
 }
 
 /* ================== Animations ================== */
@@ -235,3 +235,47 @@ body {
     font-size: 12px;
     color: #999;
 }
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 14px 16px !important;
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 20px !important;
+    }
+
+    .start-exam,
+    .result-card,
+    .recent-exams-card {
+        padding: 18px;
+    }
+
+    .exam-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .exam-score {
+        text-align: right;
+    }
+}
+
+.reveal {
+  animation: riseIn 0.6s ease both;
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(99, 102, 241, 0.35);
+  outline-offset: 2px;
+}
+

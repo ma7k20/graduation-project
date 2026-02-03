@@ -1,5 +1,5 @@
-body {
-    font-family: 'Cairo', sans-serif !important;
+﻿body {
+    font-family: 'Noto Naskh Arabic', sans-serif !important;
     background: linear-gradient(135deg, #f5f7ff, #ffffff);
     min-height: 100vh;
 }
@@ -44,7 +44,7 @@ body {
     gap: 10px;
 }
 
-/* إخفاء الـ radio */
+/* ط¥ط®ظپط§ط، ط§ظ„ظ€ radio */
 .role-switcher input[type="radio"] {
     display: none;
 }
@@ -115,3 +115,40 @@ body {
     text-decoration: none;
     font-size: 14px !important;
 }
+
+@media (max-width: 576px) {
+    body {
+        padding: 0 12px;
+    }
+
+    .logo-box {
+        margin-top: 40px;
+        font-size: 26px;
+    }
+
+    .logo-icon img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .auth-card {
+        padding: 1.25rem;
+    }
+}
+
+.reveal {
+  animation: riseIn 0.6s ease both;
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(99, 102, 241, 0.35);
+  outline-offset: 2px;
+}
+

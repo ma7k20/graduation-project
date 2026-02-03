@@ -1,10 +1,10 @@
-body {
-    font-family: 'Cairo', sans-serif !important;
+﻿body {
+    font-family: 'Noto Naskh Arabic', sans-serif !important;
     background: linear-gradient(135deg, #f5f7ff, #ffffff);
     min-height: 100vh;
 }
 
-/* شعار المنصة */
+/* ط´ط¹ط§ط± ط§ظ„ظ…ظ†طµط© */
 .logo-box {
     display: flex;
     align-items: center;
@@ -115,11 +115,11 @@ body {
 }
 
 .input-icon-wrapper .form-control {
-    padding-right: 44px;         /* مساحة للأيقونة */
+    padding-right: 44px;         /* ظ…ط³ط§ط­ط© ظ„ظ„ط£ظٹظ‚ظˆظ†ط© */
     border-radius: 12px;
 }
 
-/* تغيير لون الأيقونة عند التركيز */
+/* طھط؛ظٹظٹط± ظ„ظˆظ† ط§ظ„ط£ظٹظ‚ظˆظ†ط© ط¹ظ†ط¯ ط§ظ„طھط±ظƒظٹط² */
 .input-icon-wrapper .form-control:focus + i {
     color: #4f46e5;
 }
@@ -127,3 +127,40 @@ body {
 .input-icon-wrapper .form-control:not(:placeholder-shown) + i {
     color: #4f46e5;
 }
+
+@media (max-width: 576px) {
+    body {
+        padding: 0 12px;
+    }
+
+    .logo-box {
+        margin-top: 40px;
+        font-size: 26px;
+    }
+
+    .logo-icon img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .auth-card {
+        padding: 1.25rem;
+    }
+}
+
+.reveal {
+  animation: riseIn 0.6s ease both;
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(99, 102, 241, 0.35);
+  outline-offset: 2px;
+}
+
