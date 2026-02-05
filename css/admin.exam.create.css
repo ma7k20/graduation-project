@@ -27,7 +27,7 @@ body {
   min-height: 100vh;
 }
 
-/* Sidebar */
+
 .sidebar {
   padding-bottom: 24px;
   grid-area: sidebar;
@@ -110,7 +110,7 @@ body {
   background: #fff1f2;
 }
 
-/* Content */
+
 .content {
   grid-area: content;
   padding: 34px 42px 64px;
@@ -333,7 +333,7 @@ body {
   }
 
   .sidebar {
-  padding-bottom: 24px;
+    padding-bottom: 24px;
     border-left: none;
     border-bottom: 1px solid #eef2ff;
     padding: 0;
@@ -432,8 +432,15 @@ body {
 }
 
 @keyframes riseIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nav-links a:focus-visible,
@@ -445,7 +452,7 @@ body {
 }
 
 
-/* Mobile Fixes */
+
 @media (max-width: 576px) {
   .top-bar .container {
     flex-wrap: nowrap;
@@ -453,51 +460,94 @@ body {
     justify-content: space-between;
     gap: 10px;
   }
+
   .brand-title {
     font-size: 16px;
   }
+
   .logo {
     height: 38px;
   }
+
   .back-link-inline span {
     font-size: 14px;
   }
+
   .page-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
   }
+
   .stats-grid {
     grid-template-columns: 1fr;
   }
+
   .card-box,
   .filters-card,
   .highlight-card {
     padding: 16px;
   }
+
   .table-responsive {
     font-size: 13px;
   }
 }
 
 
-/* Mobile 400 */
+
 @media (max-width: 400px) {
-  body { font-size: 14px; }
-  h1 { font-size: 24px; }
-  h2 { font-size: 20px; }
-  h3 { font-size: 18px; }
-  .brand-title { font-size: 15px; }
-  .logo { height: 34px; }
-  .btn { padding: 8px 12px; font-size: 14px; }
-  .card, .card-box, .stat-card, .grade-card, .subject-card, .unit-card { padding: 14px; }
-  .page-header { gap: 6px; }
-  .table-responsive { font-size: 12px; }
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .brand-title {
+    font-size: 15px;
+  }
+
+  .logo {
+    height: 34px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .card,
+  .card-box,
+  .stat-card,
+  .grade-card,
+  .subject-card,
+  .unit-card {
+    padding: 14px;
+  }
+
+  .page-header {
+    gap: 6px;
+  }
+
+  .table-responsive {
+    font-size: 12px;
+  }
 }
 
 
-/* Header Flex */
-.top-bar .container, .navbar {
+
+.top-bar .container,
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;

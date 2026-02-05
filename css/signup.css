@@ -4,7 +4,7 @@
     min-height: 100vh;
 }
 
-/* ط´ط¹ط§ط± ط§ظ„ظ…ظ†طµط© */
+
 .logo-box {
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@
     justify-content: center;
 }
 
-/* Card */
+
 .auth-card {
     max-width: 440px !important;
     border: none !important;
@@ -89,7 +89,7 @@
 
 .back-link {
     margin-top: 18px !important;
-    text-align: center ;
+    text-align: center;
     margin-bottom: 30px !important;
 }
 
@@ -106,7 +106,7 @@
 .input-icon-wrapper i {
     position: absolute;
     top: 50%;
-    right: 14px;                 /* RTL */
+    right: 14px;
     transform: translateY(-50%);
     color: #9ca3af;
     font-size: 18px;
@@ -115,16 +115,16 @@
 }
 
 .input-icon-wrapper .form-control {
-    padding-right: 44px;         /* ظ…ط³ط§ط­ط© ظ„ظ„ط£ظٹظ‚ظˆظ†ط© */
+    padding-right: 44px;
     border-radius: 12px;
 }
 
-/* طھط؛ظٹظٹط± ظ„ظˆظ† ط§ظ„ط£ظٹظ‚ظˆظ†ط© ط¹ظ†ط¯ ط§ظ„طھط±ظƒظٹط² */
-.input-icon-wrapper .form-control:focus + i {
+
+.input-icon-wrapper .form-control:focus+i {
     color: #4f46e5;
 }
 
-.input-icon-wrapper .form-control:not(:placeholder-shown) + i {
+.input-icon-wrapper .form-control:not(:placeholder-shown)+i {
     color: #4f46e5;
 }
 
@@ -149,79 +149,129 @@
 }
 
 .reveal {
-  animation: riseIn 0.6s ease both;
+    animation: riseIn 0.6s ease both;
 }
 
 @keyframes riseIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .btn:focus-visible,
 button:focus-visible,
 a:focus-visible {
-  outline: 3px solid rgba(99, 102, 241, 0.35);
-  outline-offset: 2px;
+    outline: 3px solid rgba(99, 102, 241, 0.35);
+    outline-offset: 2px;
 }
 
 
 
-/* Mobile Fixes */
+
 @media (max-width: 576px) {
-  .top-bar .container {
-    flex-wrap: nowrap;
+    .top-bar .container {
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .brand-title {
+        font-size: 16px;
+    }
+
+    .logo {
+        height: 38px;
+    }
+
+    .back-link-inline span {
+        font-size: 14px;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-box,
+    .filters-card,
+    .highlight-card {
+        padding: 16px;
+    }
+
+    .table-responsive {
+        font-size: 13px;
+    }
+}
+
+
+
+@media (max-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .brand-title {
+        font-size: 15px;
+    }
+
+    .logo {
+        height: 34px;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .card,
+    .card-box,
+    .stat-card,
+    .grade-card,
+    .subject-card,
+    .unit-card {
+        padding: 14px;
+    }
+
+    .page-header {
+        gap: 6px;
+    }
+
+    .table-responsive {
+        font-size: 12px;
+    }
+}
+
+
+
+.top-bar .container,
+.navbar {
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: nowrap;
     gap: 10px;
-  }
-  .brand-title {
-    font-size: 16px;
-  }
-  .logo {
-    height: 38px;
-  }
-  .back-link-inline span {
-    font-size: 14px;
-  }
-  .page-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-  .card-box,
-  .filters-card,
-  .highlight-card {
-    padding: 16px;
-  }
-  .table-responsive {
-    font-size: 13px;
-  }
-}
-
-
-/* Mobile 400 */
-@media (max-width: 400px) {
-  body { font-size: 14px; }
-  h1 { font-size: 24px; }
-  h2 { font-size: 20px; }
-  h3 { font-size: 18px; }
-  .brand-title { font-size: 15px; }
-  .logo { height: 34px; }
-  .btn { padding: 8px 12px; font-size: 14px; }
-  .card, .card-box, .stat-card, .grade-card, .subject-card, .unit-card { padding: 14px; }
-  .page-header { gap: 6px; }
-  .table-responsive { font-size: 12px; }
-}
-
-
-/* Header Flex */
-.top-bar .container, .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  gap: 10px;
 }

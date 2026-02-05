@@ -38,13 +38,13 @@
      font-size: 28px !important;
  }
 
- /* Logo */
+
  .logo {
      width: 45px;
      height: 45px;
  }
 
- /* Hover effects */
+
  .btn-outline-primary:hover {
      background: #2563eb;
      color: #fff !important;
@@ -56,13 +56,13 @@
      transform: scale(1.05);
  }
 
- /* Hamburger Custom */
+
  .navbar-toggler {
      outline: none !important;
      box-shadow: none !important;
  }
 
- /* Hero Section */
+
  .hero {
      background: linear-gradient(135deg, #f4f6ff, #ffffff);
      padding: 80px 15px;
@@ -117,7 +117,7 @@
      transform: scale(1.05);
  }
 
- /* Features */
+
  .feature-card {
      background: #fff;
      padding: 25px 15px;
@@ -139,7 +139,7 @@
      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
  }
 
- /* Grades */
+
  .grade-card {
      background: linear-gradient(135deg, #4f7cff, #9333ea);
      color: #fff;
@@ -169,7 +169,7 @@
      transform: rotate(6deg) translateY(-10px) scale(1.05);
  }
 
- /* Steps */
+
  .steps-wrapper {
      max-width: 900px;
      margin: auto;
@@ -201,7 +201,7 @@
      justify-content: center;
  }
 
- /* Access Section */
+
  .access-section {
      background: linear-gradient(90deg, #3b82f6 0%, #7c3aed 50%, #9333ea 100%);
      border-radius: 28px;
@@ -238,14 +238,14 @@
      margin: 5px;
  }
 
- /* CTA */
+
  .cta-section {
      background: #fafafa;
      padding: 60px 15px;
  }
 
  .cta-btn {
-    background: linear-gradient(to left, #7c3aed, #2563eb);
+     background: linear-gradient(to left, #7c3aed, #2563eb);
      color: #fff !important;
      border: none;
      border-radius: 120px !important;
@@ -259,7 +259,7 @@
      transform: scale(1.05);
  }
 
- /* Footer */
+
  .edu-footer {
      background: linear-gradient(135deg, #0f172a, #020617);
      color: #fff;
@@ -287,7 +287,7 @@
      text-decoration: underline;
  }
 
- /* Media Queries */
+
  @media (max-width: 1200px) {
      .hero-title {
          font-size: 55px;
@@ -333,102 +333,152 @@
      }
  }
 
-@media (max-width: 576px) {
-    .hero-title {
-        font-size: 28px;
-    }
+ @media (max-width: 576px) {
+     .hero-title {
+         font-size: 28px;
+     }
 
      .hero-text {
          font-size: 14px;
      }
 
-    #start,
-    #search {
-        padding: 12px 15px !important;
-        font-size: 14px !important;
-    }
+     #start,
+     #search {
+         padding: 12px 15px !important;
+         font-size: 14px !important;
+     }
 
      .step-item {
          padding: 15px 40px 15px 15px;
      }
 
-    .step-number {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-        right: -18px;
-    }
-}
+     .step-number {
+         width: 40px;
+         height: 40px;
+         font-size: 16px;
+         right: -18px;
+     }
+ }
 
-@media (max-width: 576px) {
-    nav {
-        height: auto !important;
-    }
+ @media (max-width: 576px) {
+     nav {
+         height: auto !important;
+     }
 
-    .navbar-brand { font-size: 14px; }
-}
-
-
-/* Mobile Fixes */
-@media (max-width: 576px) {
-  .top-bar .container {
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  .brand-title {
-    font-size: 16px;
-  }
-  .logo {
-    height: 38px;
-  }
-  .back-link-inline span {
-    font-size: 14px;
-  }
-  .page-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-  .card-box,
-  .filters-card,
-  .highlight-card {
-    padding: 16px;
-  }
-  .table-responsive {
-    font-size: 13px;
-  }
-}
-
-
-/* Mobile 400 */
-@media (max-width: 400px) {  .logo { width: 34px; height: 34px; }  .navbar-brand { font-size: 14px; }
-  body { font-size: 14px; }
-  h1 { font-size: 24px; }
-  h2 { font-size: 20px; }
-  h3 { font-size: 18px; }
-  .brand-title { font-size: 15px; }
-  .logo { height: 34px; }
-  .btn { padding: 8px 12px; font-size: 14px; }
-  .card, .card-box, .stat-card, .grade-card, .subject-card, .unit-card { padding: 14px; }
-  .page-header { gap: 6px; }
-  .table-responsive { font-size: 12px; }
-}
-
-
-/* Header Flex */
-.top-bar .container, .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  gap: 5px;
-}
+     .navbar-brand {
+         font-size: 14px;
+     }
+ }
 
 
 
+ @media (max-width: 576px) {
+     .top-bar .container {
+         flex-wrap: nowrap;
+         align-items: center;
+         justify-content: space-between;
+         gap: 10px;
+     }
 
+     .brand-title {
+         font-size: 16px;
+     }
+
+     .logo {
+         height: 38px;
+     }
+
+     .back-link-inline span {
+         font-size: 14px;
+     }
+
+     .page-header {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 8px;
+     }
+
+     .stats-grid {
+         grid-template-columns: 1fr;
+     }
+
+     .card-box,
+     .filters-card,
+     .highlight-card {
+         padding: 16px;
+     }
+
+     .table-responsive {
+         font-size: 13px;
+     }
+ }
+
+
+
+ @media (max-width: 400px) {
+     .logo {
+         width: 34px;
+         height: 34px;
+     }
+
+     .navbar-brand {
+         font-size: 14px;
+     }
+
+     body {
+         font-size: 14px;
+     }
+
+     h1 {
+         font-size: 24px;
+     }
+
+     h2 {
+         font-size: 20px;
+     }
+
+     h3 {
+         font-size: 18px;
+     }
+
+     .brand-title {
+         font-size: 15px;
+     }
+
+     .logo {
+         height: 34px;
+     }
+
+     .btn {
+         padding: 8px 12px;
+         font-size: 14px;
+     }
+
+     .card,
+     .card-box,
+     .stat-card,
+     .grade-card,
+     .subject-card,
+     .unit-card {
+         padding: 14px;
+     }
+
+     .page-header {
+         gap: 6px;
+     }
+
+     .table-responsive {
+         font-size: 12px;
+     }
+ }
+
+
+
+ .top-bar .container,
+ .navbar {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     flex-wrap: nowrap;
+     gap: 5px;
+ }
