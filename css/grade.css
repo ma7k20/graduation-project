@@ -68,14 +68,7 @@
     margin: 0;
 }
 
-@media (max-width: 576px) {
-    .top-bar .container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .page-title h1 {
+.page-title h1 {
         font-size: 22px;
     }
 
@@ -106,4 +99,104 @@ a:focus-visible {
   margin-top: 6px;
   font-size: 13px;
   color: #64748b;
+}
+
+.back-link-inline {
+  white-space: nowrap;
+}
+
+.back-link-inline span {
+    font-size: 14px;
+  }
+}
+
+.top-bar .container {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 576px) {`n  .grade-card {`n    padding: 20px 12px;`n  }`n  .grade-card h5 {`n    font-size: 16px;`n  }`n  .grade-level {`n    font-size: 12px;`n  }
+  .top-bar .container {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+  }
+  .brand-title {
+    font-size: 16px;
+  }
+  .back-link-inline span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .row.g-4 > [class^='col-'],
+  .row.g-4 > [class*=' col-'] {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+
+
+
+/* Mobile Fixes */
+@media (max-width: 576px) {
+  .top-bar .container {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .brand-title {
+    font-size: 16px;
+  }
+  .logo {
+    height: 38px;
+  }
+  .back-link-inline span {
+    font-size: 14px;
+  }
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-box,
+  .filters-card,
+  .highlight-card {
+    padding: 16px;
+  }
+  .table-responsive {
+    font-size: 13px;
+  }
+}
+
+
+
+/* Mobile 400 */
+@media (max-width: 400px) {
+  body { font-size: 14px; }
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 18px; }
+  .brand-title { font-size: 15px; }
+  .logo { height: 34px; }
+  .btn { padding: 8px 12px; font-size: 14px; }
+  .card, .card-box, .stat-card, .grade-card, .subject-card, .unit-card { padding: 14px; }
+  .page-header { gap: 6px; }
+  .table-responsive { font-size: 12px; }
+}
+
+
+/* Header Flex */
+.top-bar .container, .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 10px;
 }

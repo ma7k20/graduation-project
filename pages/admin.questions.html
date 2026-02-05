@@ -25,6 +25,8 @@
         <span>منصة بنوك الأسئلة</span>
       </div>
 
+      
+
       <nav class="nav-links">
         <a href="admin.dashboard.html"><i class="bi bi-grid"></i> نظرة عامة</a>
         <a href="admin.grades.html"><i class="bi bi-list-check"></i> الصفوف</a>
@@ -32,10 +34,12 @@
         <a href="admin.units.html"><i class="bi bi-collection"></i> الوحدات</a>
         <a class="active" href="admin.questions.html"><i class="bi bi-question-circle"></i> الأسئلة</a>
         <a href="admin.exams.html"><i class="bi bi-clipboard-check"></i> الاختبارات</a>
-        <a href="#"><i class="bi bi-trophy"></i> النتائج</a>
+        <a href="admin.results.html"><i class="bi bi-trophy"></i> النتائج</a>
       </nav>
 
       <a class="logout" href="login.html"><i class="bi bi-box-arrow-right"></i> تسجيل الخروج</a>
+
+      
           </div>
     </aside>
 
@@ -53,6 +57,8 @@
             <i class="bi bi-chevron-left"></i>
             <span>إدارة الأسئلة</span>
           </nav>
+
+      
         </div>
         <button class="btn mobile-menu-btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#adminSidebar">
           <i class="bi bi-list"></i> القائمة
@@ -161,7 +167,7 @@
         </div>
         <div class="modal-body">
           <form class="question-form">
-            <div class="mb-3 qtype-section">
+            <div class="mb-3 qtype-section form-section">
               <label class="form-label">نوع السؤال</label>
               <div class="type-grid">
                 <label class="type-card">
@@ -182,7 +188,7 @@
               <label class="form-label">نص السؤال</label>
               <input type="text" class="form-control" placeholder="مثال: ما ناتج جمع 5 + 3 ؟">
             </div>
-            <div class="row g-2 mb-3">
+            <div class="row g-2 mb-3 form-section">
               <div class="col-md-4">
                 <label class="form-label">الصف</label>
                 <select class="form-select">
@@ -213,7 +219,7 @@
                 </select>
               </div>
             </div>
-            <div class="mb-3 options-mcq">
+            <div class="mb-3 options-mcq form-section">
               <label class="form-label">الخيارات (اختيار من متعدد)</label>
               <div class="choices">
                 <label class="choice-item">
@@ -236,7 +242,7 @@
               <div class="form-hint">حدد الإجابة الصحيحة عبر تحديد الدائرة.</div>
             </div>
 
-            <div class="mb-3 options-tf">
+            <div class="mb-3 options-tf form-section">
               <label class="form-label">الإجابة (صح/خطأ)</label>
               <div class="choices">
                 <label class="choice-item">
@@ -250,7 +256,7 @@
               </div>
             </div>
 
-            <div class="mb-3 options-fill">
+            <div class="mb-3 options-fill form-section">
               <label class="form-label">الإجابة الصحيحة (اكمل الفراغ)</label>
               <input type="text" class="form-control" placeholder="اكتب الإجابة الصحيحة">
             </div>
@@ -285,6 +291,7 @@
 </body>
 
 </html>
+
 
 
 

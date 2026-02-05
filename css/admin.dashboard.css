@@ -33,6 +33,7 @@ h1, h2, h3, h4, h5, h6, .card-title, .page-header h4, .stat-value {
 
 /* Sidebar */
 .sidebar {
+  padding-bottom: 24px;
   grid-area: sidebar;
   background: #fff;
   border-left: 1px solid #eef2ff;
@@ -97,7 +98,7 @@ h1, h2, h3, h4, h5, h6, .card-title, .page-header h4, .stat-value {
 }
 
 .logout {
-  margin-top: auto;
+  margin-top: 16px;
   text-decoration: none;
   color: #ef4444;
   font-weight: 600;
@@ -473,7 +474,7 @@ h1, h2, h3, h4, h5, h6, .card-title, .page-header h4, .stat-value {
 }
 
 .test-date {
-  margin-top: 6px;
+  margin-top: 16px;
   color: #94a3b8;
   font-size: 14px;
   display: flex;
@@ -526,7 +527,7 @@ h1, h2, h3, h4, h5, h6, .card-title, .page-header h4, .stat-value {
 }
 
 .subject-meta {
-  margin-top: 6px;
+  margin-top: 16px;
   color: #94a3b8;
   font-size: 14px;
   display: flex;
@@ -552,6 +553,7 @@ h1, h2, h3, h4, h5, h6, .card-title, .page-header h4, .stat-value {
   }
 
   .sidebar {
+  padding-bottom: 24px;
     border-left: none;
     border-bottom: 1px solid #eef2ff;
     padding: 0;
@@ -620,4 +622,65 @@ h1, h2, h3, h4, h5, h6, .card-title, .page-header h4, .stat-value {
 .view-all:focus-visible {
   outline: 3px solid rgba(99, 102, 241, 0.35);
   outline-offset: 2px;
+}
+
+
+/* Mobile Fixes */
+@media (max-width: 576px) {
+  .top-bar .container {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .brand-title {
+    font-size: 16px;
+  }
+  .logo {
+    height: 38px;
+  }
+  .back-link-inline span {
+    font-size: 14px;
+  }
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-box,
+  .filters-card,
+  .highlight-card {
+    padding: 16px;
+  }
+  .table-responsive {
+    font-size: 13px;
+  }
+}
+
+
+/* Mobile 400 */
+@media (max-width: 400px) {
+  body { font-size: 14px; }
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 18px; }
+  .brand-title { font-size: 15px; }
+  .logo { height: 34px; }
+  .btn { padding: 8px 12px; font-size: 14px; }
+  .card, .card-box, .stat-card, .grade-card, .subject-card, .unit-card { padding: 14px; }
+  .page-header { gap: 6px; }
+  .table-responsive { font-size: 12px; }
+}
+
+
+/* Header Flex */
+.top-bar .container, .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 10px;
 }
