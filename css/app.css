@@ -1615,7 +1615,8 @@ body.page-dashboard-student .user-name {
   body.page-admin-questions .layout,
   body.page-admin-exams .layout,
   body.page-admin-results .layout,
-  body.page-admin-exam-create .layout {
+  body.page-admin-exam-create .layout,
+  body.page-admin-dashboard .layout {
     grid-template-columns: 1fr !important;
     grid-template-areas: "content" !important;
   }
@@ -1626,7 +1627,8 @@ body.page-dashboard-student .user-name {
   body.page-admin-questions .sidebar,
   body.page-admin-exams .sidebar,
   body.page-admin-results .sidebar,
-  body.page-admin-exam-create .sidebar {
+  body.page-admin-exam-create .sidebar,
+  body.page-admin-dashboard .sidebar {
     position: fixed !important;
     top: 0;
     height: 100vh;
@@ -1641,7 +1643,8 @@ body.page-dashboard-student .user-name {
   body.page-admin-questions .sidebar.offcanvas-lg,
   body.page-admin-exams .sidebar.offcanvas-lg,
   body.page-admin-results .sidebar.offcanvas-lg,
-  body.page-admin-exam-create .sidebar.offcanvas-lg {
+  body.page-admin-exam-create .sidebar.offcanvas-lg,
+  body.page-admin-dashboard .sidebar.offcanvas-lg {
     width: 280px;
   }
 
@@ -1651,7 +1654,8 @@ body.page-dashboard-student .user-name {
   body.page-admin-questions .sidebar .offcanvas-body,
   body.page-admin-exams .sidebar .offcanvas-body,
   body.page-admin-results .sidebar .offcanvas-body,
-  body.page-admin-exam-create .sidebar .offcanvas-body {
+  body.page-admin-exam-create .sidebar .offcanvas-body,
+  body.page-admin-dashboard .sidebar .offcanvas-body {
     padding: 18px;
   }
 
@@ -1661,7 +1665,8 @@ body.page-dashboard-student .user-name {
   body.page-admin-questions .content,
   body.page-admin-exams .content,
   body.page-admin-results .content,
-  body.page-admin-exam-create .content {
+  body.page-admin-exam-create .content,
+  body.page-admin-dashboard .content {
     width: 100%;
     max-width: 100%;
     padding: 16px 14px 32px;
